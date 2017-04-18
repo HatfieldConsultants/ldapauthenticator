@@ -2,7 +2,7 @@ import ldap3
 from ldap3.utils.conv import escape_filter_chars
 import re
 
-from jupyterhub.auth import Authenticator
+from jupyterhub.auth import Authenticator, LocalAuthenticator
 from tornado import gen
 from traitlets import Unicode, Int, Bool, List, Union
 
@@ -333,3 +333,6 @@ class LDAPAuthenticator(Authenticator):
                 username=userdn,
             ))
             return None
+
+class LDAPLocalAuthenticator(LocalAuthenticator, LDAPAuthenticator):
+    pass
