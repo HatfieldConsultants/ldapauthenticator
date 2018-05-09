@@ -4,7 +4,7 @@ setup(
     name='jupyterhub-ldapauthenticator',
     version='1.1',
     description='LDAP Authenticator for JupyterHub',
-    url='https://github.com/yuvipanda/ldapauthenticator',
+    url='https://github.com/HatfieldConsultants/ldapauthenticator',
     author='Yuvi Panda',
     author_email='yuvipanda@riseup.net',
     license='3 Clause BSD',
