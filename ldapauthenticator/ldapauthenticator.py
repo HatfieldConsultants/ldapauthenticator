@@ -228,6 +228,9 @@ class LDAPAuthenticator(Authenticator):
             is_bound = conn.bind()
             if not is_bound:
                 self.log.warn("Can't connect to LDAP")
+                self.log.warn("server="+self.server_address)
+                self.log.warn("user="+self.escape_userdn_if_needed(self.lookup_dn_search_user))
+                self.log.warn("password="+self.lookup_dn_search_password)                
                 return None
 
             conn.search(
